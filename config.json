@@ -7,111 +7,134 @@
     "proxy": null,
     "userAgent": "Mozilla/5.0 (Linux; Android 14; SM-S928B) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Mobile Safari/537.36",
     "intervalGetNewCookie": 1440,
-    "notes": "time the system automatically retrieves new cookies from email/password, unit is minute, if you set null, the system will not automatically retrieve new cookies, it saves you from having to manually change your cookie every time it expires. recommended set to 1440 (1day) or 4320 (3day).TO BE ABLE TO USE THIS FEATURE YOU NEED TO ENTER THE ACCOUNT PASSWORD ABOVE"
+    "notes": "المدة التي يقوم فيها النظام تلقائياً بجلب كوكيز جديدة من البريد الإلكتروني وكلمة المرور بالدقائق. إذا وضعت null فلن يتم التحديث التلقائي. يُنصح بـ 1440 (يوم) أو 4320 (3 أيام). لاستخدام هذه الميزة يجب إدخال كلمة مرور الحساب بالأعلى."
   },
+
   "antiInbox": false,
-  "language": "en",
-  "notesLanguage": "change to your language with ISO 639-1 code, available languages: vi (Vietnamese), en (English)",
-  "nickNameBot": "গেসুকে 😈",
+
+  "language": "ar",
+
+  "notesLanguage": "غيّر اللغة باستعمال كود ISO 639-1، اللغات المتوفرة: ar (العربية)، en (الإنجليزية)، vi (الفيتنامية)",
+
+  "nickNameBot": "『 نـانـيـكـا ⚡』",
+
   "prefix": "~",
+
   "noPrefix": true,
-  "noPrefixNotes": "When true, Bot Admins (role 2) and Developers (role 4) can run commands without the prefix",
+
+  "noPrefixNotes": "عند تفعيل true يمكن للأدمن والمطور تشغيل الأوامر بدون البريفكس",
+
   "adminOnly": {
     "enable": false,
     "ignoreCommand": []
   },
+
   "adminBot": [
     "61588057525081"
   ],
+
   "premiumUsers": [
     "61588057525081"
   ],
+
   "devUsers": [
     "61588057525081"
   ],
-  "notes_premiumUsers": "List of user IDs with premium access (role 3)",
-  "notes_devUsers": "List of developer IDs with full access (role 4)",
+
+  "developerName": "『 المطور الأسطوري | أؤمو عبد العزيز قدوري 👑』",
+
+  "notes_premiumUsers": "قائمة المستخدمين الذين يملكون صلاحيات بريميوم (رتبة 3)",
+
+  "notes_devUsers": "قائمة المطورين الذين يملكون جميع الصلاحيات (رتبة 4)",
+
   "whiteListMode": {
     "enable": false,
     "whiteListIds": [
       "61588057525081"
     ],
-    "notes": "if you enable this feature, only the ids in the whiteListIds list can use the bot"
+    "notes": "إذا فعلت هذه الميزة فلن يستطيع استخدام البوت إلا الآيديات الموجودة بالقائمة"
   },
+
   "whiteListModeThread": {
     "enable": false,
     "whiteListThreadIds": [],
-    "notes": "if you enable this feature, only the thread in the whiteListThreadIds list can use the bot",
-    "how_it_work": "if you enable both whiteListMode and whiteListModeThread, the system will check if the user is in whiteListIds, then check if the thread is in whiteListThreadIds, if one of the conditions is true, the user can use the bot"
+    "notes": "إذا فعلت هذه الميزة فلن تعمل البوت إلا في المجموعات الموجودة بالقائمة",
+    "how_it_work": "إذا فعلت النظامين معاً، سيتحقق البوت أولاً من الآيدي ثم من المجموعة، وإذا تحقق أحد الشرطين يستطيع المستخدم استعمال البوت"
   },
+
   "database": {
     "type": "sqlite",
     "uriMongodb": "",
     "autoSyncWhenStart": false,
     "autoRefreshThreadInfoFirstTime": true,
-    "notes": "(1) type selects 'json' or 'sqlite' or 'mongodb'. If you choose mongodb, enter uri connect mongodb in the uriMongodb section, instructions to get uri connect mongodb at: https://youtu.be/z1f9urHW5xY. I recommend using 'mongodb' or 'sqlite', json is not recommended because it is not stable. (2) when you set autoSyncWhenStart to true, the bot will automatically synchronize the data in the database when starting the bot, this will make the bot start slower. (3) when you set autoRefreshThreadInfoFirstTime to true, the bot will automatically refresh the thread information when get first message from the thread since starting the bot"
+
+    "notes": "(1) نوع قاعدة البيانات يمكن أن يكون json أو sqlite أو mongodb. يُفضل sqlite أو mongodb لأن json غير مستقر. (2) عند تفعيل autoSyncWhenStart سيقوم البوت بمزامنة البيانات تلقائياً عند التشغيل مما قد يجعل الإقلاع أبطأ. (3) عند تفعيل autoRefreshThreadInfoFirstTime سيتم تحديث معلومات المجموعة تلقائياً عند أول رسالة بعد تشغيل البوت."
   },
-  "timeZone": "Asia/Dhaka",
+
+  "timeZone": "Africa/Algiers",
+
   "dashBoard": {
     "enable": true,
     "expireVerifyCode": 300000,
     "port": 5000
   },
+
   "serverUptime": {
     "enable": false,
     "port": 5000,
+
     "socket": {
       "enable": true,
       "channelName": "uptime",
       "verifyToken": "8126831f37f9cb8d6ba35489bac1ac619b114178e9617613ae8277ed4328fa3f"
     }
   },
+
   "spamProtection": {
     "commandThreshold": 8,
     "timeWindow": 10,
     "banDuration": 24,
-    "notes": "Auto-ban threads when users spam commands. commandThreshold: number of commands, timeWindow: seconds, banDuration: hours"
+
+    "notes": "حماية ضد السبام: يتم حظر المجموعة تلقائياً عند إرسال عدد كبير من الأوامر. commandThreshold = عدد الأوامر، timeWindow = الثواني، banDuration = مدة الحظر بالساعات"
   },
+
   "autoRestart": {
     "time": null,
-    "notes": "you can set time is interval with milisecond or cron time, example: 1000, 10000, 60000, 3600000, 86400000, 0 0 * * *,... docs: https://www.npmjs.com/package/node-cron. If you set time is 0 or false or null, the bot will not auto restart"
+
+    "notes": "يمكنك تحديد وقت إعادة التشغيل بالملي ثانية أو باستعمال cron. إذا وضعت null أو false فلن تتم إعادة التشغيل التلقائية."
   },
+
   "autoUptime": {
     "enable": true,
     "timeInterval": 180,
     "url": "",
-    "notes": "the value of timeInterval is seconds, url is the url you want to send the request to (automatically detected for hosting glitch or replit)"
+
+    "notes": "القيمة timeInterval بالثواني، والرابط url هو الرابط الذي سيتم إرسال الطلبات إليه تلقائياً."
   },
+
   "autoLoadScripts": {
     "enable": false,
     "ignoreCmds": "",
     "ignoreEvents": "",
-    "notes": "this feature will automatically load the script when scripts have been changed, you can set ignoreCmds to ignore commands, ignoreEvents to ignore events, separate by comma or space, example: \"cmd1.js cmd2.js cmd3.js\" (without backslash)"
+
+    "notes": "هذه الميزة تقوم بإعادة تحميل السكربتات تلقائياً عند تعديلها."
   },
+
   "autoRefreshFbstate": true,
+
   "autoReloginWhenChangeAccount": false,
+
   "autoRestartWhenListenMqttError": false,
+
   "restartListenMqtt": {
     "enable": true,
     "timeRestart": 3600000,
     "delayAfterStopListening": 2000,
     "logNoti": true,
-    "notes": "the value of timeRestart and delayAfterStopListening is milisecond, You shouldn't edit this if you don't know what it is"
+
+    "notes": "القيم بالملي ثانية. لا يُنصح بتعديلها إلا إذا كنت تعرف ما تفعله."
   },
-  "notiWhenListenMqttError": {
-    "notes": "This is the message when the bot is listening to the mqtt server and the mqtt server stops working due to account problems such as: locked acc, blocked due to spam,... bot will automatically send notifications to parts of your settings. You must change enable to true to use this feature. See bot/login/handlerWhenListenHasError.js file for details on how it works",
-    "telegram": {
-      "enable": false,
-      "botToken": "",
-      "chatId": "",
-      "note": "Can send notifications to many chatId, separate by comma or space, example: \"123456789 987654321\" (without backslash)"
-    },
-    "discordHook": {
-      "enable": false,
-      "webhookUrl": "",
-      "note": "Can send notifications to many webhookUrl, separate by comma or space, example: \"https://discord.com/api/webhooks/123456789/123456789 https://discord.com/api/webhooks/987654321/987654321\" (without backslash)"
-    }
-  },
+
   "hideNotiMessage": {
     "commandNotFound": false,
     "adminOnly": false,
@@ -121,6 +144,7 @@
     "needRoleToUseCmdOnReply": false,
     "needRoleToUseCmdOnReaction": false
   },
+
   "logEvents": {
     "disableAll": false,
     "message": true,
@@ -132,11 +156,14 @@
     "typ": false,
     "presence": false
   },
+
   "typingIndicator": {
     "enable": true,
     "duration": 2000,
-    "notes": "Shows typing indicator before sending messages. duration is in milliseconds (1000 = 1 second). Set enable to false to disable."
+
+    "notes": "إظهار مؤشر الكتابة قبل إرسال الرسائل. 1000 = ثانية واحدة."
   },
+
   "optionsFca": {
     "online": true,
     "selfListen": true,
@@ -156,6 +183,7 @@
     "maxRequestsPerMinute": 50,
     "requestCooldownMs": 60000,
     "errorCacheTtlMs": 300000,
-    "notes": "nkx-fca options — see node_modules/nkx-fca/README.md for full documentation"
+
+    "notes": "إعدادات nkx-fca الخاصة بالبـوت."
   }
 }
